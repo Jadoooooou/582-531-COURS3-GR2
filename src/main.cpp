@@ -21,6 +21,10 @@ void loop() {
   // oscslip_pd
   int maLectureBouton = digitalRead( MA_BROCHE_BOUTON );
   monOsc.sendInt("/bouton", maLectureBouton);
+
+  // oscslip_angle
+  int maLectureAnalogique = analogRead(MA_BROCHE_ANGLE);
+  monOsc.sendInt("/angle", maLectureAnalogique);
   delay(100);
 
 }
