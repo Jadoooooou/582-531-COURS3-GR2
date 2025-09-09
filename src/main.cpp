@@ -17,4 +17,10 @@ void loop() {
   Serial.println();
   delay(100);
 
+  
+  // oscslip_pd
+  int maLectureBouton = digitalRead( MA_BROCHE_BOUTON );
+  monOsc.sendInt("/bouton", maLectureBouton);
+  delay(100);
+
 }
